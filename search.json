@@ -30,14 +30,14 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "about me",
+    "title": "About Brandon Ansbergs",
     "section": "",
     "text": "MarkDown Basics"
   },
   {
-    "objectID": "index.html#title-2-header",
-    "href": "index.html#title-2-header",
-    "title": "about me",
+    "objectID": "index.html#here-you-will-find-various-projects-ive-created-data-sets-i-have-cleansed-ml-models-i-have-produced-and-code-i-have-wrote.",
+    "href": "index.html#here-you-will-find-various-projects-ive-created-data-sets-i-have-cleansed-ml-models-i-have-produced-and-code-i-have-wrote.",
+    "title": "About Brandon Ansbergs",
     "section": "",
     "text": "MarkDown Basics"
   },
@@ -135,43 +135,43 @@
   {
     "objectID": "resume.html",
     "href": "resume.html",
-    "title": "Isaac Newtons’s CV",
+    "title": "Brandon H. Ansbergs",
     "section": "",
-    "text": "Physicist, Mathematician, Cambridge professor.\n\nisaac@applesdofall.org | My wikipedia page\n\n\n\nStanding on the shoulders of giants\n\n\nLaws of motion, gravitation, minting coins, disliking Robert Hooke\n\n\n\nCooling, power series, optics, alchemy, planetary motions, apples.\n\n\n\n\n1654-1660 The King’s School, Grantham.\nJune 1661 - now Trinity College, Cambridge\n\nSizar\n\n1667 - death Trinity College, Cambridge\n\nFellow\n\n\n\n\n2012 President, Royal Society, London, UK\nAssociate, French Academy of Science, Paris, France\n\n\n\n\n\n\n1669 Newton Sir I, De analysi per æquationes numero terminorum infinitas.\n1669 Lectiones opticæ.\netc. etc. etc.\n\n\n\n2012 Infinitesimal calculus for solutions to physics problems, SMBC patent 001\n\n\n\n\n1600 Royal Mint, London\n\nWarden\nMinted coins\n\n1600 Lucasian professor of Mathematics, Cambridge University"
-  },
-  {
-    "objectID": "resume.html#currently",
-    "href": "resume.html#currently",
-    "title": "Isaac Newtons’s CV",
-    "section": "",
-    "text": "Standing on the shoulders of giants\n\n\nLaws of motion, gravitation, minting coins, disliking Robert Hooke\n\n\n\nCooling, power series, optics, alchemy, planetary motions, apples."
+    "text": "Brigham Young University-Idaho (April 2023 - Current)\nBS, Computer Science\nRexburg, ID\n\nGPA – 4.0\nRelevant Coursework: Programming w/Functions, Data Analytics and Intuition, Algorithmic Thinking, Cybersecurity, Web Fundamentals, Programming, Computer Systems\n\nClark College (March 2019)\nAssociate of Arts Degree\nVancouver, WA"
   },
   {
     "objectID": "resume.html#education",
     "href": "resume.html#education",
-    "title": "Isaac Newtons’s CV",
+    "title": "Brandon H. Ansbergs",
     "section": "",
-    "text": "1654-1660 The King’s School, Grantham.\nJune 1661 - now Trinity College, Cambridge\n\nSizar\n\n1667 - death Trinity College, Cambridge\n\nFellow"
+    "text": "Brigham Young University-Idaho (April 2023 - Current)\nBS, Computer Science\nRexburg, ID\n\nGPA – 4.0\nRelevant Coursework: Programming w/Functions, Data Analytics and Intuition, Algorithmic Thinking, Cybersecurity, Web Fundamentals, Programming, Computer Systems\n\nClark College (March 2019)\nAssociate of Arts Degree\nVancouver, WA"
+  },
+  {
+    "objectID": "resume.html#tools",
+    "href": "resume.html#tools",
+    "title": "Brandon H. Ansbergs",
+    "section": "Tools",
+    "text": "Tools\nPython, Tableau, Linux, AWS, GitHub, Loom, Microsoft Office"
+  },
+  {
+    "objectID": "resume.html#academic-projects",
+    "href": "resume.html#academic-projects",
+    "title": "Brandon H. Ansbergs",
+    "section": "Academic Projects",
+    "text": "Academic Projects\nCSE 201 Programming with Functions\n\nDemonstrated proficiency in Python programming, effectively utilizing libraries, external modules, and existing functions to enhance program capabilities for data analysis, testing, and data manipulation tasks, while adhering to established coding best practices for code clarity, readability, and maintainability.\n\nDS 150 Data Analytics and Intuition\n\nEmployed data cleansing techniques to merge nine data sources into a unified dataset of 62,047 lines and 81 variables, enabling comprehensive data analysis and subsequent presentation of findings through impactful Tableau visualizations.\n\nCSE 180 Algorithmic Thinking\n\nApplied algorithmic concepts and theories to analyze and optimize various scenarios, including trip planning, graduation planning, and long-term goal planning."
+  },
+  {
+    "objectID": "resume.html#work-experience",
+    "href": "resume.html#work-experience",
+    "title": "Brandon H. Ansbergs",
+    "section": "Work Experience",
+    "text": "Work Experience\nZumiez (March 2022 – Sept 2023)\nSales Associate, Vancouver, WA\n\nExceeded sales goals each period, ranking in the top 25% of part time salespeople at my store.\nMentored new sales associates and helped them to develop their sales skills and product knowledge.\nDemonstrated a commitment to teamwork by willingly stepping in to cover call-out shifts, ensuring the store’s smooth operation.\n\nSafeway (June 2022 – April 2023)\nDeli Clerk, Vancouver, WA\n\nIdentified and eliminated process bottlenecks, resulting in a 15% increase in productivity, which allowed me to provide better customer service and support to my team.\nEnsured new food safety and sanitation procedures were implemented, resulting in a 100% passing rate on all food safety inspections.\nVolunteered to take on additional responsibilities, such as leading the deli team during busy periods when the manager wasn’t available, or on days when the deli was short-staffed."
   },
   {
     "objectID": "resume.html#awards",
     "href": "resume.html#awards",
-    "title": "Isaac Newtons’s CV",
-    "section": "",
-    "text": "2012 President, Royal Society, London, UK\nAssociate, French Academy of Science, Paris, France"
-  },
-  {
-    "objectID": "resume.html#publications",
-    "href": "resume.html#publications",
-    "title": "Isaac Newtons’s CV",
-    "section": "",
-    "text": "1669 Newton Sir I, De analysi per æquationes numero terminorum infinitas.\n1669 Lectiones opticæ.\netc. etc. etc.\n\n\n\n2012 Infinitesimal calculus for solutions to physics problems, SMBC patent 001"
-  },
-  {
-    "objectID": "resume.html#occupation",
-    "href": "resume.html#occupation",
-    "title": "Isaac Newtons’s CV",
-    "section": "",
-    "text": "1600 Royal Mint, London\n\nWarden\nMinted coins\n\n1600 Lucasian professor of Mathematics, Cambridge University"
+    "title": "Brandon H. Ansbergs",
+    "section": "Awards",
+    "text": "Awards\nEagle Scout, Boy Scouts of America (Jan 2015)"
   }
 ]
