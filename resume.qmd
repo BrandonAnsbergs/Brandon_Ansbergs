@@ -1,89 +1,58 @@
 ---
-layout: cv
-title: Isaac Newtons's CV
+title: "Brandon H. Ansbergs"
+contact:
+ phone: 360.281.9687
+ linkedin: https://www.linkedin.com/in/brandon-ansbergs/
+ email: Ans22004@byui.edu
 ---
-# Isaac Newton
-Physicist, Mathematician, Cambridge professor.
-
-<div id="webaddress">
-<a href="isaac@applesdofall.org">isaac@applesdofall.org</a>
-| <a href="http://en.wikipedia.org/wiki/Isaac_Newton">My wikipedia page</a>
-</div>
-
-
-## Currently
-
-Standing on the shoulders of giants
-
-### Specialized in
-
-Laws of motion, gravitation, minting coins, disliking [Robert Hooke](http://en.wikipedia.org/wiki/Robert_Hooke)
-
-
-### Research interests
-
-Cooling, power series, optics, alchemy, planetary motions, apples.
-
 
 ## Education
 
-`1654-1660`
-__The King's School, Grantham.__
+**Brigham Young University-Idaho** (April 2023 - Current)  
+BS, Computer Science  
+Rexburg, ID
 
-`June 1661 - now`
-__Trinity College, Cambridge__
+- GPA – 4.0
+- Relevant Coursework: Programming w/Functions, Data Analytics and Intuition, Algorithmic Thinking, Cybersecurity, Web Fundamentals, Programming, Computer Systems
 
-- Sizar
+**Clark College** (March 2019)  
+Associate of Arts Degree  
+Vancouver, WA
 
-`1667 - death`
-__Trinity College, Cambridge__
+## Tools
 
-- Fellow
+Python, Tableau, Linux, AWS, GitHub, Loom, Microsoft Office
 
+## Academic Projects
 
+**CSE 201 Programming with Functions**
+
+- Demonstrated proficiency in Python programming, effectively utilizing libraries, external modules, and existing functions to enhance program capabilities for data analysis, testing, and data manipulation tasks, while adhering to established coding best practices for code clarity, readability, and maintainability.
+
+**DS 150 Data Analytics and Intuition**
+
+- Employed data cleansing techniques to merge nine data sources into a unified dataset of 62,047 lines and 81 variables, enabling comprehensive data analysis and subsequent presentation of findings through impactful Tableau visualizations.
+
+**CSE 180 Algorithmic Thinking**
+
+- Applied algorithmic concepts and theories to analyze and optimize various scenarios, including trip planning, graduation planning, and long-term goal planning.
+
+## Work Experience
+
+**Zumiez** (March 2022 – Sept 2023)  
+Sales Associate, Vancouver, WA
+
+- Exceeded sales goals each period, ranking in the top 25% of part time salespeople at my store.
+- Mentored new sales associates and helped them to develop their sales skills and product knowledge.
+- Demonstrated a commitment to teamwork by willingly stepping in to cover call-out shifts, ensuring the store's smooth operation.
+
+**Safeway** (June 2022 – April 2023)  
+Deli Clerk, Vancouver, WA
+
+- Identified and eliminated process bottlenecks, resulting in a 15% increase in productivity, which allowed me to provide better customer service and support to my team.
+- Ensured new food safety and sanitation procedures were implemented, resulting in a 100% passing rate on all food safety inspections.
+- Volunteered to take on additional responsibilities, such as leading the deli team during busy periods when the manager wasn't available, or on days when the deli was short-staffed.
 
 ## Awards
 
-`2012`
-President, *Royal Society*, London, UK
-
-Associate, *French Academy of Science*, Paris, France
-
-
-
-## Publications
-
-<!-- A list is also available [online](http://scholar.google.co.uk/citations?user=LTOTl0YAAAAJ) -->
-
-### Journals
-
-`1669`
-Newton Sir I, De analysi per æquationes numero terminorum infinitas. 
-
-`1669`
-Lectiones opticæ.
-
-etc. etc. etc.
-
-### Patents
-
-`2012`
-Infinitesimal calculus for solutions to physics problems, [SMBC](http://www.techdirt.com/articles/20121011/09312820678/if-patents-had-been-around-time-newton.shtml) patent 001
-
-
-## Occupation
-
-`1600`
-__Royal Mint__, London
-
-- Warden
-- Minted coins
-
-`1600`
-__Lucasian professor of Mathematics__, Cambridge University
-
-
-
-<!-- ### Footer
-
-Last updated: May 2013 -->
+Eagle Scout, Boy Scouts of America (Jan 2015)

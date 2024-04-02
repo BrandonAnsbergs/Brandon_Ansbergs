@@ -1,10 +1,10 @@
 ---
-title: "about me"
-subtitle: "my data science portfolio"
+title: "About Brandon Ansbergs"
+subtitle: "My Data Science Portfolio"
 # use quarto markdown to 
 ---
 
-# Title 1 Header
-## Title 2 Header
+# Welcome to my portfolio
+## Here you will find various projects I've created, data sets I have cleansed, ML models I have produced, and code I have wrote.
 
 [MarkDown Basics](https://quarto.org/docs/authoring/markdown-basics.html#links-images)
