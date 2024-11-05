@@ -1,55 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://BrandonAnsbergs.github.io/Brandon_Ansbergs/story_telling.html</loc>
+    <lastmod>2024-11-05T22:49:57.567Z</lastmod>
+  </url>
+  <url>
     <loc>https://BrandonAnsbergs.github.io/Brandon_Ansbergs/ml.html</loc>
-    <lastmod>2024-04-02T17:07:06.687Z</lastmod>
-  </url>
-  <url>
-    <loc>https://BrandonAnsbergs.github.io/Brandon_Ansbergs/exploration.html</loc>
-    <lastmod>2024-04-02T17:07:06.687Z</lastmod>
-  </url>
-  <url>
-    <loc>https://BrandonAnsbergs.github.io/Brandon_Ansbergs/index.html</loc>
-    <lastmod>2024-04-02T17:07:06.687Z</lastmod>
-  </url>
-  <url>
-    <loc>https://BrandonAnsbergs.github.io/Brandon_Ansbergs/Cleansing_Projects/project5.html</loc>
-    <lastmod>2024-04-02T17:07:06.679Z</lastmod>
-  </url>
-  <url>
-    <loc>https://BrandonAnsbergs.github.io/Brandon_Ansbergs/Cleansing_Projects/project3.html</loc>
-    <lastmod>2024-04-02T17:07:06.679Z</lastmod>
-  </url>
-  <url>
-    <loc>https://BrandonAnsbergs.github.io/Brandon_Ansbergs/Cleansing_Projects/project4.html</loc>
-    <lastmod>2024-04-02T17:07:06.679Z</lastmod>
-  </url>
-  <url>
-    <loc>https://BrandonAnsbergs.github.io/Brandon_Ansbergs/cleansing.html</loc>
-    <lastmod>2024-04-02T17:07:06.687Z</lastmod>
-  </url>
-  <url>
-    <loc>https://BrandonAnsbergs.github.io/Brandon_Ansbergs/full_stack.html</loc>
-    <lastmod>2024-04-02T17:07:06.687Z</lastmod>
-  </url>
-  <url>
-    <loc>https://BrandonAnsbergs.github.io/Brandon_Ansbergs/Cleansing_Projects/project2.html</loc>
-    <lastmod>2024-04-02T17:07:06.679Z</lastmod>
-  </url>
-  <url>
-    <loc>https://BrandonAnsbergs.github.io/Brandon_Ansbergs/Cleansing_Projects/project1.html</loc>
-    <lastmod>2024-04-02T17:07:06.679Z</lastmod>
+    <lastmod>2024-11-05T22:49:57.567Z</lastmod>
   </url>
   <url>
     <loc>https://BrandonAnsbergs.github.io/Brandon_Ansbergs/competition.html</loc>
-    <lastmod>2024-04-02T17:07:06.687Z</lastmod>
+    <lastmod>2024-11-05T22:49:57.567Z</lastmod>
   </url>
   <url>
-    <loc>https://BrandonAnsbergs.github.io/Brandon_Ansbergs/story_telling.html</loc>
-    <lastmod>2024-04-02T17:07:06.687Z</lastmod>
+    <loc>https://BrandonAnsbergs.github.io/Brandon_Ansbergs/Cleansing_Projects/project1.html</loc>
+    <lastmod>2024-11-05T22:49:57.555Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BrandonAnsbergs.github.io/Brandon_Ansbergs/Cleansing_Projects/project4.html</loc>
+    <lastmod>2024-11-05T22:49:57.555Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BrandonAnsbergs.github.io/Brandon_Ansbergs/Cleansing_Projects/project5.html</loc>
+    <lastmod>2024-11-05T22:49:57.555Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BrandonAnsbergs.github.io/Brandon_Ansbergs/full_stack.html</loc>
+    <lastmod>2024-11-05T22:49:57.567Z</lastmod>
   </url>
   <url>
     <loc>https://BrandonAnsbergs.github.io/Brandon_Ansbergs/resume.html</loc>
-    <lastmod>2024-04-02T17:07:06.687Z</lastmod>
+    <lastmod>2024-11-05T22:49:57.567Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BrandonAnsbergs.github.io/Brandon_Ansbergs/exploration.html</loc>
+    <lastmod>2024-11-05T22:49:57.567Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BrandonAnsbergs.github.io/Brandon_Ansbergs/Cleansing_Projects/project3.html</loc>
+    <lastmod>2024-11-05T22:49:57.555Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BrandonAnsbergs.github.io/Brandon_Ansbergs/Cleansing_Projects/project2.html</loc>
+    <lastmod>2024-11-05T22:49:57.555Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BrandonAnsbergs.github.io/Brandon_Ansbergs/notebooks/starter_bikes.html</loc>
+    <lastmod>2024-11-05T22:49:57.567Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BrandonAnsbergs.github.io/Brandon_Ansbergs/index.html</loc>
+    <lastmod>2024-11-05T22:49:57.567Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BrandonAnsbergs.github.io/Brandon_Ansbergs/cleansing.html</loc>
+    <lastmod>2024-11-05T22:49:57.567Z</lastmod>
   </url>
 </urlset>

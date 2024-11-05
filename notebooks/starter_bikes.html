@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>starter_bikes – Brandon Ansbergs Data Science Portfolio</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../Images/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Brandon Ansbergs Data Science Portfolio</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resume.html"> 
+<span class="menu-text">My Resume</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../cleansing.html"> 
+<span class="menu-text">Data Cleansing</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../exploration.html"> 
+<span class="menu-text">Data Exploration</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../story_telling.html"> 
+<span class="menu-text">Story Telling</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../ml.html"> 
+<span class="menu-text">Machine Learning</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../full_stack.html"> 
+<span class="menu-text">Full Stack</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../competition.html"> 
+<span class="menu-text">Competition</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+
+<div id="cell-0" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tensorflow <span class="im">as</span> tf</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tensorflow <span class="im">import</span> keras</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tensorflow.keras <span class="im">import</span> layers</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>bikes <span class="op">=</span> pd.read_csv(<span class="st">'https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/bikes.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-1" class="cell" data-outputid="87423f76-6ad4-427f-b11d-7640f4b3c8ed" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> mean_squared_error, r2_score, mean_absolute_error, median_absolute_error</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tensorflow <span class="im">as</span> tf</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tensorflow <span class="im">import</span> keras</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tensorflow.keras <span class="im">import</span> layers</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert 'dteday' to datetime and extract features</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>bikes[<span class="st">'dteday'</span>] <span class="op">=</span> pd.to_datetime(bikes[<span class="st">'dteday'</span>])</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>bikes[<span class="st">'year'</span>] <span class="op">=</span> bikes[<span class="st">'dteday'</span>].dt.year</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>bikes[<span class="st">'month'</span>] <span class="op">=</span> bikes[<span class="st">'dteday'</span>].dt.month</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>bikes[<span class="st">'day'</span>] <span class="op">=</span> bikes[<span class="st">'dteday'</span>].dt.day</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>bikes.drop(columns<span class="op">=</span>[<span class="st">'dteday'</span>], inplace<span class="op">=</span><span class="va">True</span>)  <span class="co"># Drop the original date column</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Bin the windspeed into categories</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>wind_bins <span class="op">=</span> [<span class="op">-</span>np.inf, <span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">15</span>, <span class="dv">20</span>, np.inf]  <span class="co"># 6 edges</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>wind_labels <span class="op">=</span> [<span class="st">'Very Calm'</span>, <span class="st">'Calm'</span>, <span class="st">'Light'</span>, <span class="st">'Moderate'</span>, <span class="st">'Strong'</span>, <span class="st">'Very Strong'</span>]  <span class="co"># 6 labels</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>bikes[<span class="st">'windspeed_bin'</span>] <span class="op">=</span> pd.cut(bikes[<span class="st">'windspeed'</span>], bins<span class="op">=</span>wind_bins, labels<span class="op">=</span>wind_labels)</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="co"># One-hot encode categorical variables</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>bikes <span class="op">=</span> pd.get_dummies(bikes, columns<span class="op">=</span>[<span class="st">'weathersit'</span>, <span class="st">'season'</span>, <span class="st">'windspeed_bin'</span>], drop_first<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Define features and target variable</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> bikes.drop(columns<span class="op">=</span>[<span class="st">'casual'</span>, <span class="st">'registered'</span>])  <span class="co"># Use 'casual' and 'registered' as targets or combine them</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> bikes[<span class="st">'casual'</span>] <span class="op">+</span> bikes[<span class="st">'registered'</span>]  <span class="co"># Predict total bike rentals</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Split the dataset</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X, y, test_size<span class="op">=</span><span class="fl">0.2</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Feature scaling</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>scaler <span class="op">=</span> StandardScaler()</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>X_train_scaled <span class="op">=</span> scaler.fit_transform(X_train)</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>X_test_scaled <span class="op">=</span> scaler.transform(X_test)</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="co"># Build the neural network model</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> keras.Sequential([</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>    layers.Input(shape<span class="op">=</span>(X_train_scaled.shape[<span class="dv">1</span>],)),  <span class="co"># Fix the shape to a tuple</span></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>    layers.Dense(<span class="dv">128</span>, activation<span class="op">=</span><span class="st">'relu'</span>),</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>    layers.Dense(<span class="dv">64</span>, activation<span class="op">=</span><span class="st">'relu'</span>),</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>    layers.Dense(<span class="dv">32</span>, activation<span class="op">=</span><span class="st">'relu'</span>),</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>    layers.Dense(<span class="dv">1</span>)  <span class="co"># Output layer for regression</span></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>])</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="co"># Compile the model</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>model.<span class="bu">compile</span>(optimizer<span class="op">=</span><span class="st">'adam'</span>, loss<span class="op">=</span><span class="st">'mean_squared_error'</span>, metrics<span class="op">=</span>[<span class="st">'mae'</span>])</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit the model</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>history <span class="op">=</span> model.fit(X_train_scaled, y_train, epochs<span class="op">=</span><span class="dv">100</span>, batch_size<span class="op">=</span><span class="dv">32</span>, validation_split<span class="op">=</span><span class="fl">0.2</span>, verbose<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a><span class="co"># Predictions</span></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>y_pred <span class="op">=</span> model.predict(X_test_scaled)</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a><span class="co"># Evaluate the model</span></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>r_squared <span class="op">=</span> r2_score(y_test, y_pred)</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>rmse <span class="op">=</span> np.sqrt(mean_squared_error(y_test, y_pred))</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>mae <span class="op">=</span> mean_absolute_error(y_test, y_pred)</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>medae <span class="op">=</span> median_absolute_error(y_test, y_pred)</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate percentage metrics</span></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>within_5 <span class="op">=</span> np.mean(np.<span class="bu">abs</span>((y_test <span class="op">-</span> y_pred.flatten()) <span class="op">/</span> y_test) <span class="op">&lt;</span> <span class="fl">0.05</span>) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>within_10 <span class="op">=</span> np.mean(np.<span class="bu">abs</span>((y_test <span class="op">-</span> y_pred.flatten()) <span class="op">/</span> y_test) <span class="op">&lt;</span> <span class="fl">0.10</span>) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>within_20 <span class="op">=</span> np.mean(np.<span class="bu">abs</span>((y_test <span class="op">-</span> y_pred.flatten()) <span class="op">/</span> y_test) <span class="op">&lt;</span> <span class="fl">0.20</span>) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a><span class="co"># Display metrics</span></span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Within 5%: </span><span class="sc">{</span>within_5<span class="sc">:.2f}</span><span class="ss">%'</span>)</span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Within 10%: </span><span class="sc">{</span>within_10<span class="sc">:.2f}</span><span class="ss">%'</span>)</span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Within 20%: </span><span class="sc">{</span>within_20<span class="sc">:.2f}</span><span class="ss">%'</span>)</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'R^2: </span><span class="sc">{</span>r_squared<span class="sc">:.4f}</span><span class="ss">'</span>)</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'RMSE: </span><span class="sc">{</span>rmse<span class="sc">:.4f}</span><span class="ss">'</span>)</span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Mean Absolute Error: </span><span class="sc">{</span>mae<span class="sc">:.4f}</span><span class="ss">'</span>)</span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Median Absolute Error: </span><span class="sc">{</span>medae<span class="sc">:.4f}</span><span class="ss">'</span>)</span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a><span class="co"># Optional: Plot training history</span></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>plt.plot(history.history[<span class="st">'loss'</span>], label<span class="op">=</span><span class="st">'Training Loss'</span>)</span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>plt.plot(history.history[<span class="st">'val_loss'</span>], label<span class="op">=</span><span class="st">'Validation Loss'</span>)</span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Model Loss'</span>)</span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Loss'</span>)</span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Epoch'</span>)</span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a><span class="co"># Optional: Plotting true vs predicted values</span></span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a>plt.scatter(y_test, y_pred)</span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'True Values'</span>)</span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Predictions'</span>)</span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'True vs Predicted Bike Rentals'</span>)</span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a>plt.plot([y_test.<span class="bu">min</span>(), y_test.<span class="bu">max</span>()], [y_test.<span class="bu">min</span>(), y_test.<span class="bu">max</span>()], <span class="st">'k--'</span>, lw<span class="op">=</span><span class="dv">2</span>)  <span class="co"># Diagonal line</span></span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Epoch 1/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 17s 5ms/step - loss: 94008.7812 - mae: 213.8355 - val_loss: 56755.8125 - val_mae: 163.3681
+Epoch 2/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 17s 3ms/step - loss: 51385.0859 - mae: 152.2182 - val_loss: 39359.5312 - val_mae: 131.1403
+Epoch 3/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 7s 3ms/step - loss: 38197.6562 - mae: 127.0671 - val_loss: 31272.4316 - val_mae: 113.2189
+Epoch 4/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 9s 3ms/step - loss: 29036.8242 - mae: 110.0518 - val_loss: 23879.6562 - val_mae: 99.6817
+Epoch 5/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 9s 2ms/step - loss: 22288.7402 - mae: 96.7721 - val_loss: 20201.7676 - val_mae: 92.0027
+Epoch 6/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - loss: 18887.6895 - mae: 88.3834 - val_loss: 17910.0430 - val_mae: 84.9720
+Epoch 7/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 9s 2ms/step - loss: 17288.1309 - mae: 83.8529 - val_loss: 16512.3672 - val_mae: 83.3527
+Epoch 8/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - loss: 15945.4023 - mae: 81.2483 - val_loss: 15425.8799 - val_mae: 79.2470
+Epoch 9/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 9s 2ms/step - loss: 14440.8750 - mae: 77.2829 - val_loss: 14004.0928 - val_mae: 76.2418
+Epoch 10/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 5s 2ms/step - loss: 13453.8398 - mae: 74.9311 - val_loss: 13373.7520 - val_mae: 74.5782
+Epoch 11/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 5s 2ms/step - loss: 12088.5840 - mae: 71.6098 - val_loss: 12560.8809 - val_mae: 72.4592
+Epoch 12/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - loss: 11420.5605 - mae: 69.6990 - val_loss: 11726.7988 - val_mae: 70.4112
+Epoch 13/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 8s 2ms/step - loss: 10431.7109 - mae: 66.3950 - val_loss: 10241.0605 - val_mae: 65.1133
+Epoch 14/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 7s 3ms/step - loss: 10195.6133 - mae: 65.5549 - val_loss: 12191.0137 - val_mae: 72.9270
+Epoch 15/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 4s 2ms/step - loss: 9646.0137 - mae: 63.7586 - val_loss: 9964.0488 - val_mae: 65.3271
+Epoch 16/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 6s 2ms/step - loss: 9244.8506 - mae: 62.6889 - val_loss: 9596.3486 - val_mae: 63.3917
+Epoch 17/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 9s 2ms/step - loss: 9032.7139 - mae: 61.5658 - val_loss: 9373.7051 - val_mae: 62.9089
+Epoch 18/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - loss: 8287.9355 - mae: 59.2909 - val_loss: 9349.9121 - val_mae: 62.0332
+Epoch 19/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 9s 2ms/step - loss: 8437.7842 - mae: 59.4650 - val_loss: 8921.0527 - val_mae: 60.2710
+Epoch 20/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 7s 3ms/step - loss: 8161.5894 - mae: 58.4594 - val_loss: 9019.6904 - val_mae: 61.3562
+Epoch 21/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 4s 2ms/step - loss: 7939.7866 - mae: 57.5805 - val_loss: 8727.2295 - val_mae: 60.3362
+Epoch 22/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 5s 2ms/step - loss: 7711.1709 - mae: 56.7002 - val_loss: 8803.8096 - val_mae: 59.9136
+Epoch 23/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 5s 2ms/step - loss: 7628.1357 - mae: 56.3436 - val_loss: 8708.5596 - val_mae: 59.5629
+Epoch 24/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 10s 2ms/step - loss: 7751.9443 - mae: 56.5072 - val_loss: 8497.3555 - val_mae: 58.5232
+Epoch 25/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 5s 2ms/step - loss: 7569.9717 - mae: 55.8504 - val_loss: 7964.8267 - val_mae: 56.4554
+Epoch 26/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 4s 2ms/step - loss: 7275.1099 - mae: 54.8592 - val_loss: 8105.6011 - val_mae: 56.5456
+Epoch 27/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 7s 3ms/step - loss: 7244.7676 - mae: 54.7700 - val_loss: 7956.0054 - val_mae: 56.2610
+Epoch 28/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 9s 2ms/step - loss: 7159.8398 - mae: 54.5214 - val_loss: 7875.5635 - val_mae: 55.8663
+Epoch 29/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 7s 3ms/step - loss: 7269.5547 - mae: 54.3730 - val_loss: 7944.6455 - val_mae: 56.2397
+Epoch 30/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 9s 2ms/step - loss: 7371.2246 - mae: 54.8639 - val_loss: 8237.8887 - val_mae: 57.1884
+Epoch 31/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 6s 2ms/step - loss: 7291.8228 - mae: 54.4897 - val_loss: 7620.4551 - val_mae: 54.7664
+Epoch 32/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 10s 2ms/step - loss: 7174.9409 - mae: 53.9998 - val_loss: 7718.6450 - val_mae: 55.3951
+Epoch 33/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 4s 2ms/step - loss: 6648.4375 - mae: 52.3546 - val_loss: 7366.9731 - val_mae: 53.8601
+Epoch 34/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - loss: 6966.7520 - mae: 53.3299 - val_loss: 8366.4795 - val_mae: 57.9833
+Epoch 35/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 9s 2ms/step - loss: 6905.7363 - mae: 53.2057 - val_loss: 8247.6084 - val_mae: 57.6272
+Epoch 36/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 7s 3ms/step - loss: 6917.5361 - mae: 52.8440 - val_loss: 7654.7622 - val_mae: 55.5257
+Epoch 37/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 9s 2ms/step - loss: 6934.1577 - mae: 52.8302 - val_loss: 8044.9316 - val_mae: 55.9332
+Epoch 38/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - loss: 6765.5444 - mae: 52.1404 - val_loss: 7590.7500 - val_mae: 54.5253
+Epoch 39/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 8s 2ms/step - loss: 6851.0298 - mae: 52.4172 - val_loss: 7243.0200 - val_mae: 52.9940
+Epoch 40/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 7s 3ms/step - loss: 6670.6943 - mae: 52.0454 - val_loss: 7559.6748 - val_mae: 54.5246
+Epoch 41/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 9s 2ms/step - loss: 6521.6631 - mae: 51.5593 - val_loss: 7487.4248 - val_mae: 54.3772
+Epoch 42/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 7s 3ms/step - loss: 6559.4902 - mae: 51.4045 - val_loss: 7617.7686 - val_mae: 54.9671
+Epoch 43/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 4s 2ms/step - loss: 6367.9341 - mae: 50.8182 - val_loss: 7526.7686 - val_mae: 54.5815
+Epoch 44/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 5s 2ms/step - loss: 6559.6655 - mae: 51.7426 - val_loss: 7569.5400 - val_mae: 54.9070
+Epoch 45/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 6s 2ms/step - loss: 6417.8442 - mae: 50.7502 - val_loss: 7664.9868 - val_mae: 55.0344
+Epoch 46/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 10s 3ms/step - loss: 6344.4297 - mae: 50.8448 - val_loss: 7460.6436 - val_mae: 54.1680
+Epoch 47/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 10s 2ms/step - loss: 6247.7671 - mae: 50.3353 - val_loss: 7818.5020 - val_mae: 55.9433
+Epoch 48/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 9s 2ms/step - loss: 6204.1211 - mae: 50.1615 - val_loss: 7547.7690 - val_mae: 54.1911
+Epoch 49/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 5s 2ms/step - loss: 6267.2783 - mae: 50.3267 - val_loss: 7952.5513 - val_mae: 56.3571
+Epoch 50/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 5s 2ms/step - loss: 6261.6953 - mae: 50.0347 - val_loss: 7440.2422 - val_mae: 54.2415
+Epoch 51/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 5s 2ms/step - loss: 6208.0264 - mae: 50.0245 - val_loss: 7216.1548 - val_mae: 52.8564
+Epoch 52/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 7s 3ms/step - loss: 6157.5781 - mae: 50.0823 - val_loss: 7561.5913 - val_mae: 54.2079
+Epoch 53/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 5s 2ms/step - loss: 6213.0225 - mae: 49.9452 - val_loss: 7640.3867 - val_mae: 54.6321
+Epoch 54/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 6s 2ms/step - loss: 6391.1675 - mae: 50.5878 - val_loss: 7182.6851 - val_mae: 52.8689
+Epoch 55/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 10s 2ms/step - loss: 6063.4688 - mae: 49.4140 - val_loss: 7812.6187 - val_mae: 56.0077
+Epoch 56/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - loss: 6216.2383 - mae: 49.8247 - val_loss: 7126.6548 - val_mae: 52.9757
+Epoch 57/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 9s 2ms/step - loss: 6195.8184 - mae: 49.3497 - val_loss: 7063.4927 - val_mae: 52.3413
+Epoch 58/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - loss: 5995.4858 - mae: 49.2399 - val_loss: 7366.8857 - val_mae: 53.8413
+Epoch 59/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 4s 2ms/step - loss: 6083.6904 - mae: 49.1703 - val_loss: 7082.5713 - val_mae: 52.2204
+Epoch 60/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - loss: 6002.0923 - mae: 49.0177 - val_loss: 7275.1396 - val_mae: 52.5360
+Epoch 61/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 5s 2ms/step - loss: 5851.8970 - mae: 48.6496 - val_loss: 7000.1157 - val_mae: 51.6861
+Epoch 62/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 4s 2ms/step - loss: 5887.6104 - mae: 48.7236 - val_loss: 7335.1250 - val_mae: 53.3217
+Epoch 63/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 8s 3ms/step - loss: 5895.4814 - mae: 48.5117 - val_loss: 7220.5088 - val_mae: 52.5406
+Epoch 64/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 5s 2ms/step - loss: 5601.2412 - mae: 47.7754 - val_loss: 7631.4229 - val_mae: 54.0168
+Epoch 65/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 5s 2ms/step - loss: 5934.6611 - mae: 48.9750 - val_loss: 7052.0781 - val_mae: 51.7833
+Epoch 66/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 10s 2ms/step - loss: 5897.6602 - mae: 48.6399 - val_loss: 7020.7339 - val_mae: 51.8193
+Epoch 67/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - loss: 5765.2153 - mae: 48.1892 - val_loss: 7201.7632 - val_mae: 52.4088
+Epoch 68/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 5s 2ms/step - loss: 5761.0342 - mae: 48.2244 - val_loss: 7056.0850 - val_mae: 51.8182
+Epoch 69/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 6s 2ms/step - loss: 5637.1841 - mae: 47.7585 - val_loss: 7260.6221 - val_mae: 53.0521
+Epoch 70/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 5s 2ms/step - loss: 5817.1104 - mae: 48.2608 - val_loss: 6975.5571 - val_mae: 52.1577
+Epoch 71/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 5s 2ms/step - loss: 5724.0439 - mae: 48.0134 - val_loss: 7055.9321 - val_mae: 51.8861
+Epoch 72/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - loss: 5655.2900 - mae: 47.6047 - val_loss: 7220.3472 - val_mae: 52.2917
+Epoch 73/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 9s 2ms/step - loss: 5850.3491 - mae: 48.2816 - val_loss: 7268.6890 - val_mae: 52.7843
+Epoch 74/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - loss: 5741.7100 - mae: 48.0787 - val_loss: 6845.6177 - val_mae: 51.1606
+Epoch 75/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 10s 3ms/step - loss: 5518.3940 - mae: 47.3945 - val_loss: 6870.5107 - val_mae: 51.2475
+Epoch 76/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 9s 2ms/step - loss: 5596.7407 - mae: 47.4335 - val_loss: 7082.8438 - val_mae: 52.0534
+Epoch 77/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - loss: 5488.5698 - mae: 46.9379 - val_loss: 6935.4858 - val_mae: 51.4731
+Epoch 78/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 5s 2ms/step - loss: 5505.6318 - mae: 47.1739 - val_loss: 7192.8208 - val_mae: 53.0839
+Epoch 79/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 5s 2ms/step - loss: 5553.7183 - mae: 47.3999 - val_loss: 7066.5444 - val_mae: 52.4266
+Epoch 80/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - loss: 5478.3301 - mae: 46.7957 - val_loss: 6945.2666 - val_mae: 51.9226
+Epoch 81/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 5s 2ms/step - loss: 5285.5830 - mae: 46.3139 - val_loss: 6881.3188 - val_mae: 51.3135
+Epoch 82/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 6s 2ms/step - loss: 5500.3242 - mae: 47.2244 - val_loss: 7037.6665 - val_mae: 52.3097
+Epoch 83/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 5s 2ms/step - loss: 5392.3853 - mae: 46.7008 - val_loss: 6983.0801 - val_mae: 51.9735
+Epoch 84/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 12s 3ms/step - loss: 5318.0176 - mae: 46.3088 - val_loss: 7089.5845 - val_mae: 52.4603
+Epoch 85/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 5s 2ms/step - loss: 5358.6147 - mae: 46.4874 - val_loss: 6699.6411 - val_mae: 50.6966
+Epoch 86/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 5s 2ms/step - loss: 5359.3779 - mae: 46.4456 - val_loss: 7031.2090 - val_mae: 51.8090
+Epoch 87/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - loss: 5382.0874 - mae: 46.4471 - val_loss: 7135.6519 - val_mae: 52.4535
+Epoch 88/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 10s 3ms/step - loss: 5428.1748 - mae: 46.6717 - val_loss: 6656.0161 - val_mae: 50.1414
+Epoch 89/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 9s 2ms/step - loss: 5250.5171 - mae: 46.2692 - val_loss: 6973.6035 - val_mae: 51.5651
+Epoch 90/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 7s 3ms/step - loss: 5377.2832 - mae: 46.2857 - val_loss: 6840.2070 - val_mae: 51.0875
+Epoch 91/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 5s 2ms/step - loss: 5255.1006 - mae: 46.0936 - val_loss: 6837.0898 - val_mae: 51.0425
+Epoch 92/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 5s 2ms/step - loss: 5229.5488 - mae: 46.0729 - val_loss: 7038.2212 - val_mae: 51.8810
+Epoch 93/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - loss: 5379.9229 - mae: 46.4374 - val_loss: 6880.5586 - val_mae: 51.2717
+Epoch 94/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 10s 3ms/step - loss: 5225.6025 - mae: 45.8754 - val_loss: 6833.7808 - val_mae: 50.9771
+Epoch 95/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 5s 2ms/step - loss: 5236.5913 - mae: 46.0989 - val_loss: 6828.6060 - val_mae: 51.0394
+Epoch 96/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 5s 2ms/step - loss: 5042.8242 - mae: 45.4473 - val_loss: 6892.4653 - val_mae: 51.3193
+Epoch 97/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 7s 3ms/step - loss: 5141.6440 - mae: 45.7855 - val_loss: 7328.0083 - val_mae: 53.3129
+Epoch 98/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 9s 2ms/step - loss: 5012.4839 - mae: 45.3709 - val_loss: 7065.7886 - val_mae: 52.0290
+Epoch 99/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 10s 2ms/step - loss: 5130.3647 - mae: 45.7228 - val_loss: 7211.7744 - val_mae: 53.3557
+Epoch 100/100
+2250/2250 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - loss: 5192.0688 - mae: 45.8113 - val_loss: 6718.6572 - val_mae: 50.6301
+703/703 ━━━━━━━━━━━━━━━━━━━━ 1s 1ms/step
+Within 5%: 17.15%
+Within 10%: 33.08%
+Within 20%: 55.91%
+R^2: 0.9426
+RMSE: 82.1175
+Mean Absolute Error: 50.6721
+Median Absolute Error: 28.9061</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="starter_bikes_files/figure-html/cell-3-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="starter_bikes_files/figure-html/cell-3-output-3.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="cell-2" class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tensorflow <span class="im">as</span> tf</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tensorflow <span class="im">import</span> keras</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tensorflow.keras <span class="im">import</span> layers</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the dataset</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>bikes_m <span class="op">=</span> pd.read_csv(<span class="st">'https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/biking_holdout_test_mini.csv'</span>)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert 'dteday' to datetime and extract features</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>bikes_m[<span class="st">'dteday'</span>] <span class="op">=</span> pd.to_datetime(bikes_m[<span class="st">'dteday'</span>])</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>bikes_m[<span class="st">'year'</span>] <span class="op">=</span> bikes_m[<span class="st">'dteday'</span>].dt.year</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>bikes_m[<span class="st">'month'</span>] <span class="op">=</span> bikes_m[<span class="st">'dteday'</span>].dt.month</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>bikes_m[<span class="st">'day'</span>] <span class="op">=</span> bikes_m[<span class="st">'dteday'</span>].dt.day</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>bikes_m.drop(columns<span class="op">=</span>[<span class="st">'dteday'</span>], inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Bin the windspeed into categories</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>wind_bins <span class="op">=</span> [<span class="op">-</span>np.inf, <span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">15</span>, <span class="dv">20</span>, np.inf]</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>wind_labels <span class="op">=</span> [<span class="st">'Very Calm'</span>, <span class="st">'Calm'</span>, <span class="st">'Light'</span>, <span class="st">'Moderate'</span>, <span class="st">'Strong'</span>, <span class="st">'Very Strong'</span>]</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>bikes_m[<span class="st">'windspeed_bin'</span>] <span class="op">=</span> pd.cut(bikes_m[<span class="st">'windspeed'</span>], bins<span class="op">=</span>wind_bins, labels<span class="op">=</span>wind_labels)</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="co"># One-hot encode categorical variables</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>bikes_m <span class="op">=</span> pd.get_dummies(bikes_m, columns<span class="op">=</span>[<span class="st">'weathersit'</span>, <span class="st">'season'</span>, <span class="st">'windspeed_bin'</span>], drop_first<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Check the shape of the processed data</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(bikes_m.shape)  <span class="co"># Should print (number_of_samples, number_of_features)</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Define your model</span></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> keras.Sequential([</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>    layers.Input(shape<span class="op">=</span>(bikes_m.shape[<span class="dv">1</span>],)),  <span class="co"># Match number of features</span></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>    layers.Dense(<span class="dv">128</span>, activation<span class="op">=</span><span class="st">'relu'</span>),</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>    layers.Dense(<span class="dv">64</span>, activation<span class="op">=</span><span class="st">'relu'</span>),</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>    layers.Dense(<span class="dv">1</span>)  <span class="co"># Assuming regression task</span></span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>])</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare your target variable y here, e.g., y = bikes_m['target_variable']</span></span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a><span class="co"># Split data into training and testing</span></span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(bikes_m, y, test_size<span class="op">=</span><span class="fl">0.2</span>)</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>scaler <span class="op">=</span> StandardScaler()</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>X_train_scaled <span class="op">=</span> scaler.fit_transform(X_train)</span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>X_test_scaled <span class="op">=</span> scaler.transform(X_test)</span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Train the model</span></span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>model.fit(X_train_scaled, y_train, epochs<span class="op">=</span><span class="dv">100</span>, batch_size<span class="op">=</span><span class="dv">32</span>)</span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a><span class="co"># Make predictions</span></span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>predictions <span class="op">=</span> model.predict(scaler.transform(bikes_m))</span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a><span class="co"># Save predictions to a DataFrame</span></span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>my_predictions <span class="op">=</span> pd.DataFrame(predictions, columns<span class="op">=</span>[<span class="st">'predictions'</span>])</span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a>my_predictions.to_csv(<span class="st">'team4-module4-predictions.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/BrandonAnsbergs\.github\.io\/Brandon_Ansbergs\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Brandon Ansbergs 2024©</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="../www.linkedin.com/in/brandon-ansbergs">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
